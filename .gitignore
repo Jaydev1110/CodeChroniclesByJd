@@ -1,0 +1,11 @@
+/node_modules
+/elara-lib/target
+/elara-lib/pkg
+/wasm-pack.log
+/elara-lib/wasm-pack.log
+/web/dist
+/web/dist-*
+/electron/dist
+/electron/static
+/electron/node_modules
+/web/videos

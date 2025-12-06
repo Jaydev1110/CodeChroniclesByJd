@@ -1,0 +1,201 @@
+.cm-focused {
+  outline: none !important;
+}
+
+/* These are so that the white inner border radius of the editor
+matches the outer black border radius of the editor wrapper.  */
+.cm-editor {
+  border-bottom-right-radius: 0.375rem;
+}
+
+.cm-editor,
+.cm-gutter,
+.cm-gutters {
+  border-bottom-left-radius: 0.375rem;
+}
+
+.cm-tooltip-hover,
+.cm-tooltip,
+.ͼ1 .cm-tooltip {
+  /* Unfortunately there's no way to import typescript constants here,
+  but we should make sure this matches CM_TOOL_TIP_Z_INDEX in
+  web/lib/constants.ts */
+  z-index: 1040;
+}
+
+.cm-foldGutter {
+  /* We're not using the fold gutter, so hide it for now. */
+  width: 0;
+}
+
+.cm-selectionMatch {
+  /* Selection match highlighting can be confusing for new
+  programmers since it looks like the matches are also being
+  selected (e.g. when you try to copy/paste). Disable it by
+  overriding the background for selection matches. */
+  background: transparent !important;
+}
+
+/* .active-line-primary is the class added by our Editor component
+to indicate the line of code is currently running */
+.active-line-primary {
+  position: relative;
+  background-color: var(--chakra-colors-blue-100);
+}
+
+/* This should match the BODY_RESPONSIVE_FONT_SCALE that we've set up for
+the editor. These variables are used in media queries at the bottom of the page. */
+.active-line-primary::before,
+.active-line-primary::after,
+.active-line-secondary::after {
+  --font-size-base: 0.9rem;
+  --font-size-xl: 1rem;
+  --font-size-2xl: 1.2rem;
+  --font-size-3xl: 1.6rem;
+}
+
+.active-line-primary::before {
+  content: "▶︎";
+  position: absolute;
+  top: calc(var(--font-size-xl) / 4 * -1);
+  z-index: 200;
+  left: calc((var(--font-size-xl) + 2px) * -1);
+  font-size: var(--font-size-xl);
+  color: var(--chakra-colors-blue-400);
+}
+
+.active-line-primary::after {
+  content: "";
+  position: absolute;
+  z-index: 200;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--chakra-colors-blue-400);
+}
+
+/* .active-line-secondary is the class added by our Editor component
+to indicate which lines of code (if any) are part of the current
+call stack (i.e. it highlights function calls higher up in the stack). */
+.active-line-secondary {
+  position: relative;
+  background-color: var(--chakra-colors-teal-100);
+}
+
+.active-line-secondary::before {
+  content: "▶︎";
+  position: absolute;
+  top: -0.25rem;
+  z-index: 200;
+  left: -1.1rem;
+  font-size: 1rem;
+  color: var(--chakra-colors-teal-400);
+}
+
+.active-line-secondary::after {
+  content: "";
+  position: absolute;
+  z-index: 200;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--chakra-colors-teal-400);
+}
+
+.cm-tooltip.cm-tooltip-hover {
+  background-color: var(--chakra-colors-gray-200);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Override comment styles. For example, we don't want hover effects
+for hoverables inside of comments. */
+.cm-comment {
+  color: var(--chakra-colors-green-500);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block; /* This is needed to override parent text-decoration styles. */
+}
+
+.cm-comment:hover {
+  font-weight: 600;
+}
+
+/* Override string styles. */
+.cm-string {
+  color: var(--chakra-colors-orange-700);
+}
+
+.cm-string:hover {
+  font-weight: 500;
+}
+
+/* .cm-hoverable is the class added by our highlightHoverable
+plugin for any text which supports documentation-on-hover */
+.cm-hoverable {
+  color: var(--chakra-colors-purple-600);
+  transition: font-weight 0s;
+}
+
+.cm-hoverable:hover {
+  font-weight: 700;
+  transition: font-weight 1s;
+}
+
+/* .cm-disabled-func is the class added by our strikeDisabledFuncs
+plugin for any functions which are currently disabled. */
+.cm-disabled-func {
+  text-decoration: line-through;
+}
+
+.editor-example .cm-scroller {
+  min-height: 80px;
+  max-height: 200px;
+}
+
+.editor-example .cm-gutters {
+  min-height: 80px !important;
+}
+
+.cm-diagnostic.cm-diagnostic-error {
+  max-width: 600px;
+}
+
+/* Slightly shrink font size for smaller screens. */
+@media (max-width: 1268px) {
+  .cm-editor .cm-content {
+    font-size: 0.9em;
+  }
+
+  .active-line-primary::after,
+  .active-line-secondary::after {
+    top: 0.9rem;
+  }
+}
+
+/* @media (min-width: 1920px) {
+  .active-line-primary::after,
+  .active-line-secondary::after {
+    top: var(--font-size-2xl);
+  }
+
+  .active-line-primary::before {
+    font-size: var(--font-size-2xl);
+    top: calc(var(--font-size-2xl) / 4 * -1);
+    left: calc((var(--font-size-2xl) + 2px) * -1);
+  }
+}
+
+@media (min-width: 2400px) {
+  .active-line-primary::after,
+  .active-line-secondary::after {
+    top: var(--font-size-3xl);
+  }
+
+  .active-line-primary::before {
+    font-size: var(--font-size-3xl);
+    top: calc(var(--font-size-3xl) / 4 * -1);
+    left: calc((var(--font-size-3xl) + 2px) * -1);
+  }
+} */

@@ -1,0 +1,279 @@
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4,
+.md-content h5 {
+  margin: 0.8rem 0 0.3rem;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.md-content h1 {
+  margin-top: 0;
+  font-size: 4rem;
+}
+
+.md-content h2 {
+  font-size: 3rem;
+}
+
+.md-content h3 {
+  font-size: 2.25rem;
+}
+
+.md-content h4 {
+  font-size: 1.8rem;
+}
+
+.md-content h5 {
+  font-size: 1.45rem;
+}
+
+.md-content h6 {
+  font-size: 1.3rem;
+}
+
+.md-content a {
+  color: var(--chakra-colors-blue-500);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.md-content a:hover {
+  text-decoration: underline;
+}
+
+.md-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.md-content .runnable-example .control-bar,
+.md-content .runnable-example p {
+  /* We don't want to change any of the CSS properties inside RunnableExample */
+  font-size: unset;
+  margin-bottom: unset;
+  font-weight: unset;
+}
+
+.md-content code {
+  background: var(--chakra-colors-gray-200);
+  border: solid 1px var(--chakra-colors-gray-300);
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+.md-content pre > code {
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 1.5rem;
+  width: 100%;
+  line-height: 1.25;
+  /* overflow-x: scroll; */
+}
+
+.md-content table {
+  margin: auto;
+  margin-bottom: 1.5rem;
+  border: solid 1px var(--chakra-colors-gray-300);
+  padding: 0.1rem 0.4rem;
+}
+
+.md-content table th {
+  background: var(--chakra-colors-gray-200);
+  border: solid 1px var(--chakra-colors-gray-300);
+  padding: 0.4rem 1rem;
+}
+
+.md-content table td {
+  border: solid 1px var(--chakra-colors-gray-300);
+  padding: 0.4rem 1rem;
+}
+
+.md-content hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: solid 2px var(--chakra-colors-gray-300);
+}
+
+.md-content ul,
+.md-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+.md-content ul li,
+.md-content ol li {
+  margin-bottom: 0.3rem;
+}
+
+.md-content.hover-doc h1,
+.md-content.hover-doc h2,
+.md-content.hover-doc h3,
+.md-content.hover-doc h4,
+.md-content.hover-doc h5 {
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.md-content.hover-doc h1 {
+  font-size: 1.5rem;
+}
+
+.md-content.hover-doc h2 {
+  font-size: 1.3rem;
+}
+
+.md-content.hover-doc h3 {
+  font-size: 1.1rem;
+}
+
+.md-content.hover-doc h4 {
+  font-size: 1rem;
+}
+
+.md-content.hover-doc h5 {
+  font-size: 0.9rem;
+}
+
+.md-content.hover-doc h6 {
+  font-size: 0.8rem;
+}
+
+.md-content.hover-doc p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.md-content.hover-doc code {
+  background: var(--chakra-colors-gray-300);
+  border: solid 1px var(--chakra-colors-gray-400);
+  padding: 0.05rem 0.3rem;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+/*
+  For smaller screen sizes, we need to scale down the hover info
+  so that it still fits on the screen. This breakpoint must match
+  BP_XL in responsive_design.ts.
+*/
+@media screen and (max-width: 1274px) {
+  .md-content.hover-doc {
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+    }
+
+    h3 {
+      font-size: 0.9rem;
+    }
+
+    h4 {
+      font-size: 0.8rem;
+    }
+
+    h5 {
+      font-size: 0.7rem;
+    }
+
+    h6 {
+      font-size: 0.6rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
+
+    code {
+      padding: 0.05rem 0.3rem;
+      font-size: 0.6rem;
+    }
+  }
+}
+
+.md-content.function-unlocked-modal h1,
+.md-content.function-unlocked-modal h2,
+.md-content.function-unlocked-modal h3,
+.md-content.function-unlocked-modal h4,
+.md-content.function-unlocked-modal h5 {
+  margin: 0.8rem 0 0.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.md-content.function-unlocked-modal h1 {
+  font-size: 2rem;
+}
+
+.md-content.function-unlocked-modal h2 {
+  font-size: 1.75rem;
+}
+
+.md-content.function-unlocked-modal h3 {
+  font-size: 1.5rem;
+}
+
+.md-content.function-unlocked-modal h4 {
+  font-size: 1.25rem;
+}
+
+.md-content.function-unlocked-modal h5 {
+  font-size: 1rem;
+}
+
+.md-content.function-unlocked-modal h6 {
+  font-size: 0.9rem;
+}
+
+.md-content.function-unlocked-modal p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.md-content.function-unlocked-modal code {
+  background: var(--chakra-colors-gray-300);
+  border: solid 1px var(--chakra-colors-gray-400);
+  padding: 0.1rem 0.4rem;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.dialog-md-content code {
+  background: rgba(255, 255, 255, 0.3);
+  border: solid 1px rgba(255, 255, 255, 0.2);
+  padding: 0.1rem 0.4rem;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.objective-text-md-content code {
+  background: rgba(0, 0, 0, 0.15);
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85rem;
+  font-family: monospace;
+}
+
+.rover-message-md-content {
+  font-size: 0.75rem;
+}
+
+.rover-message-md-content code {
+  background: rgba(0, 0, 0, 0.15);
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  padding: 0.1rem 0.3rem;
+  font-size: 0.65rem;
+  font-family: monospace;
+}
+
+.rover-message-md-content ul {
+  margin-left: 1rem;
+}

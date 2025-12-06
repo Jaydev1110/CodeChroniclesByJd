@@ -1,0 +1,46 @@
+import RunnableExample from "../runnable_example";
+import Video from "../video";
+import Card from "../card";
+import { getLocalVideoUrl } from "../../../lib/utils";
+
+### Functions
+
+<Video youTubeId="T8U2L4YVvUQ" localVideoUrl={getLocalVideoUrl("functions")}/>
+
+Functions are a fundamental building block of programming. They
+let you organize code into smaller chunks that can be re-used
+and combined in different ways. To use a function, you "call" it.
+
+Functions can have inputs (also called "arguments") that affect
+their behavior. Different functions may have different types of
+inputs.
+
+<Card type="tip">All of the code examples here are editable! You can change the code and run it again to see the results.</Card>
+
+Here's an example of calling the `move_forward` function with
+the input `4`:
+
+<RunnableExample
+  code={`move_forward(4);
+`}
+/>
+
+Here's an example of calling the `say` function with the
+input `"Hello, world!"`.
+
+<RunnableExample
+  code={`say("Hello, world!");
+`}
+/>
+
+Some functions don't need any inputs, but you still need to include the
+parentheses when calling them. Here's an example of calling the `turn_right`
+function:
+
+<RunnableExample
+  code={`turn_right();
+turn_right();
+turn_right();
+turn_right();
+`}
+/>

@@ -1,0 +1,59 @@
+import RunnableExample from "../runnable_example";
+import Video from "../video";
+import Card from "../card";
+import { getLocalVideoUrl } from "../../../lib/utils";
+import { SANDBOX_WITH_DATA_POINT_LEVEL } from "../../../lib/scenes";
+
+### Variables
+
+<Video youTubeId="BBerbG81LrI" localVideoUrl={getLocalVideoUrl("variables")}/>
+
+You can think of variables as "containers" that you can put values into and then
+use later. Almost anything can be stored in a variable: numbers, strings,
+or even the output of a function.
+
+To create a new variable, use the `let` keyword. In the example below, we
+create a new variable called `x` and set it to `2`.
+
+<Card type="try_it">Change `2` to a different number and see what happens.</Card>
+
+<RunnableExample
+  code={`// Create a new variable named x and set it to 2.
+let x = 2;
+
+// Now we can use x as the input to the say function.
+say(x);
+
+// We can treat x as a number and use it in math.
+say(x + 1);
+`}
+/>
+
+A variable can hold any type of value, including strings. In the example below,
+we create a new variable called `greeting` and set it to `"Hello"`.
+
+<Card type="tip">Don't use quotes around a variable name.</Card>
+
+<Card type="try_it">Change `"Hello"` to a different string.</Card>
+
+<RunnableExample
+  code={`// Create a new variable named greeting and set it to "Hello".
+let greeting = "Hello";
+say(greeting);
+`}
+/>
+
+If a function has an output, you can store it in a variable. This is super useful
+when you want to save the output and use it later on.
+
+<RunnableExample
+  code={`// Store the output of the read_data function in a variable.
+let data = read_data();
+
+// Now we can use the variable later on in our code...
+turn_right();
+move_forward(1);
+say(data);
+`}
+level={SANDBOX_WITH_DATA_POINT_LEVEL}
+/>

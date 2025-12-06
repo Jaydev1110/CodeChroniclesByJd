@@ -1,0 +1,48 @@
+import RunnableExample from "../runnable_example";
+import Video from "../video";
+import Card from "../card";
+import { getLocalVideoUrl } from "../../../lib/utils";
+
+import { SANDBOX_WITH_DATA_POINT_LEVEL } from "../../../lib/scenes";
+
+### Function Outputs
+
+<Video youTubeId="O1XoNe0MfVg" localVideoUrl={getLocalVideoUrl("function_outputs")}/>
+
+Some functions may have an output, also called a "return value". If a
+function has an output, it just means that it spits out a result whenever
+it is called, and you can do things with the result.
+
+<Card type="tip">Not all functions have an output. For example, the `move_forward` and `turn_left` functions do not output anything.</Card>
+
+Let's take a look at a function called `get_orientation`. It outputs a string
+based on which way the rover is facing. So for example, if the rover is facing to the
+right, the `get_orientation` function will output `"right"`.
+
+<Card type="try_it">Try adding more turns to the code below and see how the output of the `get_orientation` function changes.</Card>
+
+<RunnableExample
+  code={`// The get_orientation function outputs the direction the
+// rover is facing.
+say("I am facing " + get_orientation());
+
+// If we turn to the right, the output of the function will
+// change.
+turn_right();
+say("Now I am facing " + get_orientation());
+`}
+/>
+
+The example below introduces a "data point". Data points are scattered throughout
+Elara and can hold all kinds of information. The `read_data` function outputs whatever
+data was stored in the data point.
+
+<Card type="warning">The `read_data` function only works if the rover is next to a data point. Otherwise, it will cause an error.</Card>
+
+<RunnableExample
+  code={`// This code uses the *output* from the read_data function as
+// the *input* to the say function. It will cause the rover
+// to say whatever data is stored in the data point.
+say(read_data());`}
+  level={SANDBOX_WITH_DATA_POINT_LEVEL}
+/>
