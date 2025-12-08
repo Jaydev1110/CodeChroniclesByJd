@@ -1,0 +1,13 @@
+import { compiler } from "markdown-to-jsx";
+
+##### Data Point
+
+Can hold all kinds of information. If you
+move G.R.O.V.E.R. next to this and call the `read_data` function, it
+will output whatever the data point holds.
+
+{
+props.additionalInfo && (
+compiler("##### Additional Info\n\n" + props.additionalInfo)
+)
+}

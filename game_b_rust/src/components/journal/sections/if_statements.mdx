@@ -1,0 +1,47 @@
+import RunnableExample from "../runnable_example";
+import Video from "../video";
+import Card from "../card";
+import { getLocalVideoUrl } from "../../../lib/utils";
+
+### If Statements
+
+<Video youTubeId="hb0o3I5md7o" localVideoUrl={getLocalVideoUrl("if_statements")} />
+
+An "if statement" allows you to run certain code if something is true.
+You can use an if statement to perform different actions based on different
+conditions. If the condition is true, the code inside the curly brackets will
+be run. On the other hand, if the condition is false, the code inside the curly
+brackets will not be run.
+
+<Card type="try_it">On line 1, try changing the value of `x` to something greater than 10.</Card>
+
+<RunnableExample
+  code={`let x = 5;
+if x < 10 {
+  // This code will only run if x is less than 10.
+  say("x is less than 10");
+}`}
+/>
+
+
+Below is an example that uses strings instead. Remember:
+
+- A single equals sign (`=`) is used to assign a value to a variable.
+- A double equals sign (`==`) is used to compare two values.
+
+<Card type="try_it">On line 1, change the `fruit` variable to be "oranges" instead of "apples".</Card>
+
+<RunnableExample
+  code={`let fruit = "apples";
+
+if fruit == "apples" {
+  // This code will only run if the fruit equals "apples".
+  say("fruit is equal to 'apples'");
+}
+
+if fruit == "oranges" {
+  // This code will only run if the fruit equals "oranges".
+  say("fruit is equal to 'oranges'");
+}
+`}
+/>
