@@ -47,6 +47,13 @@ const levelData: Map<string, LevelData> = new Map(
   Object.entries(get_level_data() as any)
 );
 
+// If the solution exists, overwrite the initial_code with it.
+for (const level of levelData.values()) {
+  if ((level as any).solution) {
+    (level as any).initial_code = (level as any).solution;
+  }
+}
+
 const musicMap: Record<string, string> = {
   movement: "gettingOffTheGround",
   movement_part_two: "gettingOffTheGround",
